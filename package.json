@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "pm2 start server.js --name sampleApp-4600 && pm2 save",
+    "stop": "pm2 delete sampleApp-4600 && pm2 save",
+    "logs": "pm2 logs sampleApp-4600"
   },
   "author": "",
   "license": "ISC",
